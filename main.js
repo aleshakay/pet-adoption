@@ -64,8 +64,16 @@ const animalGetter = (animalInfo)=>{
     }
     printToDom(domstring, 'petId')
 }
-document.getElementById('dogButton').addEventListener('click', (e) => {
+ document.getElementById('dogButton').addEventListener('click', (e) => {
     const animal = e.target.id
-}
+    const animalSelected =[]
+    for(i = 0; i < petsData.length; i++){
+        const petData = petsData[i]
+        if (petData.Name === animal.Name){
+            animalSelected.push(petData)
+        }
+    }
+    animalGetter(animalSelected)
+})  
 
 animalGetter(petsData)
