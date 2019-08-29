@@ -2,11 +2,11 @@ console.log('Pet-Adoption')
 
 const petsData = [
     {
-    Image: 'https://petco.scene7.com/is/image/PETCO/849430-center-3?$ProductDetail-large$',
-    Name:  'Lady',
-    Color: 'Black',
-    SpecialSkill: 'Playing Dead',
-    TypeofPet: 'Guinea Pigs',
+        Image: 'https://petco.scene7.com/is/image/PETCO/849430-center-3?$ProductDetail-large$',
+        Name:  'Lady',
+        Color: 'Black',
+        SpecialSkill: 'Playing Dead',
+        TypeofPet: 'Guinea Pigs',
     },
     {
         Image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW0MlDscUz_O71qpOYXGwbWdGCCU8odlEZ2x2iD3hfNM7GW_7nKA',
@@ -64,4 +64,8 @@ const animalGetter = (animalInfo)=>{
     }
     printToDom(domstring, 'petId')
 }
+document.getElementById('dogButton').addEventListener('click', (e) => {
+    const animal = e.target.id
+}
+
 animalGetter(petsData)
