@@ -1,3 +1,39 @@
 body{
     background-color: fuchsia;
 }
+
+#petId {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    border: white;
+    border-style: solid;
+    border-width: 5px;
+  }
+  
+  .animalClass {
+    width: 30%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+    text-align: center;
+    border: white;
+    border-style: solid;
+    border-width: 5px;
+  }
+  
+  .animalClass img {
+    height: 200px;
+    width: 200px;
+  }
+
+  #petAdoptionButtons{
+    display: flex;
+    justify-content: center; 
+  }
+
+  #Dog{
+      
+  }
