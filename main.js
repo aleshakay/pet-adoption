@@ -27,7 +27,7 @@ const petsData = [
         Name:  'Flower Child',
         Color: 'Brown',
         SpecialSkill: 'Winking',
-        TypeofPet: 'Guinea Pigs',
+        TypeofPet: 'Guinea Pig',
     },
     {
         Image: 'https://vetstreet-brightspot.s3.amazonaws.com/1c/854d80a8b511e0a0d50050568d634f/file/labradoodle-2-645mk070111.jpg',
@@ -64,16 +64,82 @@ const animalGetter = (animalInfo)=>{
     }
     printToDom(domstring, 'petId')
 }
- document.getElementById('dogButton').addEventListener('click', (e) => {
+
+ document.getElementById('Dog').addEventListener('click', (e) => {
     const animal = e.target.id
     const animalSelected =[]
     for(i = 0; i < petsData.length; i++){
         const petData = petsData[i]
-        if (petData.Name === animal.Name){
+        if (petData.TypeofPet === animal){
             animalSelected.push(petData)
         }
     }
     animalGetter(animalSelected)
 })  
 
-animalGetter(petsData)
+document.getElementById('Guinea Pig').addEventListener('click', (e) => {
+    const animal = e.target.id
+    const animalSelected =[]
+    for(i = 0; i < petsData.length; i++){
+        const petData = petsData[i]
+        if (petData.TypeofPet === animal){
+            animalSelected.push(petData)
+        }
+    }
+    animalGetter(animalSelected)
+}) 
+
+document.getElementById('Bird').addEventListener('click', (e) => {
+    const animal = e.target.id
+    const animalSelected =[]
+    for(i = 0; i < petsData.length; i++){
+        const petData = petsData[i]
+        if (petData.TypeofPet === animal){
+            animalSelected.push(petData)
+        }
+    }
+    animalGetter(animalSelected)
+})  
+
+document.getElementById('All').addEventListener('click', (e) => {
+    const animal = e.target.id
+    const animalSelected =[]
+    for(i = 0; i < petsData.length; i++){
+        const petData = petsData[i]
+        // if (petData.TypeofPet === animal){
+            animalSelected.push(petData)
+        // }
+    }
+    animalGetter(animalSelected)
+})  
+
+
+// //animalGetter(petsData)
+// const animalClass = document.getElementsByClassName('animalbtn')
+//     for (i = 0; i < animalClass.length; i++){
+//         animalClass[i].addEventListener('click', (e) => {
+//             const animal = animalClass[i]
+            
+//             const animalSelected =[]
+//             for(i = 0; i < petsData.length; i++){
+//                 const petData = petsData[i]
+//                 if (petData.TypeofPet === animal.value){
+//                     animalSelected.push(petData)
+//                 }   
+//             }animalGetter(animalSelected) 
+//         })
+//     }
+
+
+    // document.getElementsByClassName('animalbtn').addEventListener('click', (e) => {
+    //     const animal = document.getElementsByClassName("animalbtn").getAttribute("value");
+
+    //     const animalSelected =[]
+    //     for(i = 0; i < petsData.length; i++){
+    //         const petData = petsData[i]
+    //         if (petData.TypeofPet === animal){
+    //             animalSelected.push(petData)
+    //         }
+    //     }
+    //     animalGetter(animalSelected)
+    // })  
