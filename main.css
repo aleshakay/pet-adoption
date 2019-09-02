@@ -10,7 +10,7 @@ body{
     justify-content: space-around;
     border: white;
     border-style: solid;
-    border-width: 5px;
+    border-width: 3px;
   }
   
   .animalClass {
@@ -21,12 +21,12 @@ body{
     text-align: center;
     border: white;
     border-style: solid;
-    border-width: 5px;
+    border-width: 2px;
   }
   
   .animalClass img {
     height: 200px;
-    width: 200px;
+    width: 150px;
   }
 
   #petAdoptionButtons{
@@ -34,6 +34,30 @@ body{
     justify-content: center; 
   }
 
+  .nameHeader{
+      border: white;
+      border-style: solid;
+      border-width: 1px;
+  }
+
+  .pettype{
+    border: white;
+    border-style: solid;
+    border-width: 1px;
+
+  }
   #Dog{
-      
+    background-color: aqua;
+  }
+
+  #Bird{
+    background-color: beige;
+  }
+
+  #All{
+    background-color: plum;
+  }
+
+  #GuineaPig {
+    background-color: orangered;
   }
