@@ -6,7 +6,7 @@ const petsData = [
         Name:  'Lady',
         Color: 'Black',
         SpecialSkill: 'Playing Dead',
-        TypeofPet: 'Guinea Pigs',
+        TypeofPet: 'GuineaPig',
     },
     {
         Image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW0MlDscUz_O71qpOYXGwbWdGCCU8odlEZ2x2iD3hfNM7GW_7nKA',
@@ -27,7 +27,7 @@ const petsData = [
         Name:  'Flower Child',
         Color: 'Brown',
         SpecialSkill: 'Winking',
-        TypeofPet: 'Guinea Pig',
+        TypeofPet: 'GuineaPig',
     },
     {
         Image: 'https://vetstreet-brightspot.s3.amazonaws.com/1c/854d80a8b511e0a0d50050568d634f/file/labradoodle-2-645mk070111.jpg',
@@ -55,11 +55,11 @@ const animalGetter = (animalInfo)=>{
     for(i = 0; i < animalInfo.length; i++){
         const animalArray = animalInfo[i]
         domstring += `<div class="animalClass">
-                    <h2>${animalArray.Name}</h2>
+                    <h2 class="nameHeader">${animalArray.Name}</h2>.
                     <img src=${animalArray.Image} alt='Image of ${animalArray.name}' />
                     <h3>${animalArray.Color}</h3>
                     <p>${animalArray.SpecialSkill}</p>
-                    <h3>${animalArray.TypeofPet}</p3>
+                    <h3 class="pettype">${animalArray.TypeofPet}</p3>
                     </div>`
     }
     printToDom(domstring, 'petId')
@@ -77,13 +77,14 @@ const animalGetter = (animalInfo)=>{
     animalGetter(animalSelected)
 })  
 
-document.getElementById('Guinea Pig').addEventListener('click', (e) => {
+document.getElementById('GuineaPig').addEventListener('click', (e) => {
     const animal = e.target.id
     const animalSelected =[]
     for(i = 0; i < petsData.length; i++){
         const petData = petsData[i]
         if (petData.TypeofPet === animal){
             animalSelected.push(petData)
+
         }
     }
     animalGetter(animalSelected)
@@ -108,6 +109,7 @@ document.getElementById('All').addEventListener('click', (e) => {
         const petData = petsData[i]
         // if (petData.TypeofPet === animal){
             animalSelected.push(petData)
+
         // }
     }
     animalGetter(animalSelected)
