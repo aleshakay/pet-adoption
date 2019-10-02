@@ -6,8 +6,7 @@ This website show buttons that when you click on them will present cards with th
 
 # Screenshots
 
-
-
+![Main View](https://github.com/aleshakay/pet-adoption/blob/master/screenshots/Screen%20Shot%202019-10-01%20at%2015.26.19.png)
 
 # How to Run
 
